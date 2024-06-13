@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Weather Api
+    </title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+    <div class="bottomBox">
+        <div>
+            <img src="images/sun.png" id="sun">
+
+        </div>
+
+        <div>
+            <img src="images/morning.jpg" id="moon">
+        </div>
+
+        <div>
+            <img src="images/cloud.png" id="cloud">
+        </div>
+    </div>
+    </div>
+    <div class="logo">
+        <p id="line">the_Weather</p>
+    </div>
+
+    <div class="line2">
+        satyam_anand
+    </div>
+
+    <div class="box">
+        <div class="box1" onclick="setvaluefor1()">
+            Tokyo
+        </div>
+        <div class="box2" onclick="setvaluefor2()">
+            Chicago
+        </div>
+        <div class="box3" onclick="setvaluefor3()">
+            Singapore
+
+        </div>
+        <div class="box4" onclick="setvaluefor4()">
+            London
+        </div>
+        <div class="box5" onclick="setvaluefor5()">
+            Sydney
+        </div>
+    </div>
+
+
+
+
+    <div class="boxfordates">
+        <div id="dayname"> </div>
+        <div id="date"> </div>
+        <div id="month"> </div>
+        <div id="year"> </div>
+    </div>
+
+    <div class="timeBox">
+        <div id="time"> </div>
+
+    </div>
+
+
+    <div class="main-search-input-wrap">
+        <div class="main-search-input fl-wrap">
+            <div class="main-search-input-item">
+                <input type="text" value="" placeholder="Search a City..." id="myText" onchange="fetchCityName()">
+            </div>
+            <button class="main-search-button" onclick="fetchWeatherDetails(cityName)">Search</button>
+        </div>
+
+        <div id="cityNotFound" style="display: none">
+        </div>
+
+        <div id="showError" style="display: none">
+            City name cannot be empty !
+        </div>
+        <div id="loader" style="display: none">
+            <i> fetching ...</i>
+        </div>
+    </div>
+    <div class="allvisiblecontents">
+
+        <div class="innerBox_1">
+            <div id="weatherImg">
+            </div>
+            <div id="weatherType"> Haze</div>
+
+            <div id="place_name">Singapore , SG </div>
+
+            <div id="temperatureBox">
+                <img src="images/thermo.gif" id=tempImg>
+                <span id="temperature">17 °C</span>
+            </div>
+
+            <div id="humidBox">
+                <img src="images/pressure.webp  ">
+                <span id="humidText"> Humidity :</span>
+                <span id="humid"> 58 % </span>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="innerBox_2">
+
+            <div id="forRealFeelContentBox">
+                <img src="images/realfeel.png">
+                <span id="forRealFeelContentBoxText">Reel Feel :</span>
+                <span id="forRealFeelContent"> 12 °C</span>
+
+
+                <div id="forPressureContentsBox">
+                    <img src="images/pressure.webp">
+                    <span id="forPressureContentsText">Pressure :</span>
+                    <span id="forPressureContents"> 1007 mbar</span>
+                </div>
+                <div id="forWindspeedContentsBox">
+                    <img src="images/wind.jpg   ">
+                    <span id="forWindspeedContentsText">Wind Speed :</span>
+                    <span id="forWindspeedContents"> 2 km/hr</span>
+                </div>
+
+
+                <div id="riseContentBox">
+                    <img src="images/sunrise.png   ">
+                    <span id="riseContentText"> Sun Rise :</span>
+                    <span id="riseContent"> 06:58:41 AM</span>
+                </div>
+
+                <div id="setContentBox">
+                    <img src="images/set.png  ">
+                    <span id="setContentText"> Sun Set :</span>
+                    <span id="setContent"> 07:10:53 PM</span>
+                </div>
+
+                <div id="dayLengthContentBox">
+                    <img src="images/daylength.png  ">
+                    <span id="dayLengthContentText"> Day Length :</span>
+                    <span id="dayLengthContent"> 12:10:53 Hours</span>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+        <div>
+            <img src="images/hill2.png" id="hill">
+        </div>
+
+
+        <div class="defaultTemp">
+            <p>16 °C
+            </p>
+            <span> Mexico
+                <p>&#9729;</p>
+                <div>Cloudy</div>
+
+            </span>
+        </div>
+
+        <script src="weather.js"></script>
+
+</body>
+
+</html>
